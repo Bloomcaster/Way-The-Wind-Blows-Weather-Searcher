@@ -1,4 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body{
+    background:url('http://www.freeppt.net/background/april-weather-backgrounds-for-powerpoint.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    overflow:hidden;
+    height: 100vh;
+    font-family: "MuseoModerno", sans-serif;
+}
+
+.container{
+    padding: 10px 60px;
+    color: rgb(132, 13, 13);
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 
 

@@ -7,7 +7,7 @@ let listEl - document.getElementById('myData');
 /*
 function citySearch () {
 let city = $('#city').val();
-fetch var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+fetch var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey;
 }
 */
 
