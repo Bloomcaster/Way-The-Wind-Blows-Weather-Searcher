@@ -4,6 +4,11 @@ let cityInputEl = document.querySelector('#city');
 let citySearch = [];
 let dataFormEl = document.querySelector('#data-form');
 let listEl - document.getElementById('myData');
+var timeDisplayEl = $('#time-display');
+
+
+var currentTime = moment().format("LLLL");
+$("#currentDay").text(moment().format("LLLL"))
 /*
 function citySearch () {
 let city = $('#city').val();

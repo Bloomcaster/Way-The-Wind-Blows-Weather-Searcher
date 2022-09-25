@@ -15,92 +15,109 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
 </head>
 <header>
-<h1>WAY THE WIND BLOWS WEATHER SEARCHER</h1>
+<h1>WAY THE WIND BLOWS CITY WEATHER SEARCHER</h1>
 </header>
 
 
 
 <body>
 
-  <div class="container">
+ <div class="container">
     <div class="info">
 
-      <form>
-        <fieldset>
-          <legend>City Search</legend>
-          City Name:<input"">
-          <button>Search</button>
-        </fieldset>
-        </form>
+      
+
+
+
 
       <div class="current-date">
-        <div class="time" id="time">
+        <div class="time" id="time-display">
           8 <span id="AM-PM">PM</span>
           </div>
+          <div class="date" id="date">
+            Satuday September 24 2022
+          </div>
+
+          <div class="city-container" id="city">
+            <form>
+              <fieldset>
+                <legend>City Search</legend>
+                City Name:<input type="text">
+                <button class="btn">Search</button>
+              </fieldset>
+              </form>
+        </div>
+
 
           <div class="stormy" id="all-weather-items"></div>
-          <div class="weather">
+          <div class="weather-item">
             <div>Wind Speed</div>
             <div>10pmh</div>
           </div>
 
-          <div class="weather">
+          <div class="weather-item">
             <div>Humidity</div>
             <div>10%</div>
           </div>
 
-          <div class="weather">
+          <div class="weather-item">
             <div>Temperature</div>
             <div>75 degrees</div>
           </div>
+          
 
-          <div class="weather">
+          
+<!--
+          <div class="weather-item">
             <div>Icons</div>
             <div>images</div>
-          </div>
+          </div> -->
  
-          <div class=" future-forcast">
+          <div class=" future-forecast">
             <div class="today" id="curent-temperature">
-              <img src="" alt="daily weather icons" class="weather-icon">
+              <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="daily weather-icons" class="weather-icon">
+              <div class="stormy">
               <div class="day">Monday</div>
               <div class="temp">Day - 78&#8457; F</div>
               <div class="temp">Night - 47&#8457; F</div>
           </div>
-
-          <div class="weather-forcast" id="weather-forcast">
-            <div class="weather-forcast day">Tuesday</div>
-            <img src="" alt="daily weather icons" class="weather-icons">
-              <div class="temp">Day- 78&#8457; F</div>
-              <div class="temp">Night - 47&#8457; F</div>
-          </div>
- 
-          <div class="weather-forcast" id="weather-forcast">
-            <div class="weather-forcast day">Wednesday</div>
-            <img src="" alt="daily weather icons" class="weather-icons">
-              <div class="temp">Day- 78&#8457; F</div>
-              <div class="temp">Night - 47&#8457; F</div>
           </div>
 
-          <div class="weather-forcast" id="weather-forcast">
-            <div class="weather-forcast day">Thursday</div>
-            <img src="" alt="daily weather icons" class="weather-icons">
+          <div class="card-group" id="weather-forecast">
+            <div class="weather-forecast-day">Tuesday</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="daily weather icons" class="weather-icon">
               <div class="temp">Day- 78&#8457; F</div>
               <div class="temp">Night - 47&#8457; F</div>
           </div>
  
-          <div class="weather-forcast" id="weather-forcast">
-            <div class="weather-forcast day">FRiday</div>
-            <img src="" alt="daily weather icons" class="weather-icons">
+          <div class="card-group" id="weather-forecast">
+            <div class="weather-forecast-day">Wednesday</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="daily weather icons" class="weather-icon">
+              <div class="temp">Day- 78&#8457; F</div>
+              <div class="temp">Night - 47&#8457; F</div>
+          </div>
+
+          <div class="card-group" id="weather-forecast">
+            <div class="weather-forecast-day">Thursday</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="daily weather icons" class="weather-icon">
               <div class="temp">Day- 78&#8457; F</div>
               <div class="temp">Night - 47&#8457; F</div>
           </div>
  
-          <div class="weather-forcast" id="weather-forcast">
-            <div class="weather-forcast day">Saturday</div>
-            <img src="" alt="daily weather icons" class="weather-icons">
+          <div class="card-group" id="weather-forecast">
+            <div class="weather-forecast-day">Friday</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="daily weather icons" class="weather-icon">
               <div class="temp">Day- 78&#8457; F</div>
               <div class="temp">Night - 47&#8457; F</div>
           </div>
+ 
+          <div class="card-group" id="weather-forcast">
+            <div class="weather-forcast-day">Saturday</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="daily weather icons" class="weather-icon">
+              <div class="temp">Day- 78&#8457; F</div>
+              <div class="temp">Night - 47&#8457; F</div>
+          </div>
+    </div>
  
           <style>
             body {
