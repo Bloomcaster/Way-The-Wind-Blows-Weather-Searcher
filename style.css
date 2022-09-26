@@ -102,8 +102,6 @@ justify-content: center;
 margin: 0 10px;
 border: 1px solid #eee;
 border-radius: 10px;
-
-
 }
 
 .weather-forecast .weather-forecast-day .day {
@@ -117,8 +115,7 @@ border-radius: 10px;
     font-weight: 80;
 }
 
-.weather-forecast .weather-forecast-day .day{
-display:
-}
+
+
 
 
