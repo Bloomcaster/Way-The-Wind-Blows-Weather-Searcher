@@ -1,11 +1,10 @@
 const apiKey="c3896b557cd23f558ec16fa374b09d61"
 const dateEl = moment(). format('1');
-const cityInputEl = document.querySelector('#city');
-const city = [];
-const timeEl = getElementById('time');
-const weatherForecastDayEL = document.getElementById('weather-forecast');
-const currentTempEl = document.getElementById("current-temperature");
-const currentWeatherItemsEl = getElementById('current-weather-items');
+const cityInput = document.querySelector('#city');
+const timeEl = querySelector('#time');
+const weatherForecastDayEL = document.querySelector('#weather-forecast');
+const currentTempEl = document.querySelector('#current-temperature');
+const currentWeatherItemsEl = querySelector('#current-weather-items');
 /*
 const currentTime = moment().format("LLLL");
 $("#time").text(moment().format("LLLL"))*/
@@ -27,12 +26,72 @@ setInterval ( ) => {
     dateEl.innerHTML = day[day] + ',' + date + ' ' + months[months]
 
 } 1000;
-/*dev tools are not working, check on why*/
+
+const formSubmitHandler = function (event){
+    event.preventDefault();
+
+    let city = cityInput.value;
+
+    if (city) {
+        newQuery(city);
+
+        cityInput.value = '';
+    } else {
+        alert("oh nooooo");
+    }
+    };
+
+
+const newQuery = function city () {
+    apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey;
+
+    fetch(apiKey)
+    .then(function (response) {
+        if (response.ok) {
+            response.json().then(function (data){
+                
+                displayWeather(data, city);
+            })
+        .then(data => {
+            localStorage.setItem('city',
+           
+            json.stringify(data))
+            console.log(data);
+        })
+    }
+}
+
+  fetch(apiUrl)
+ .then(function(response) {
+    if response.ok){
+       response.json().then(function (data){
+        console.log(data);
+        displayWeather(data, city);
+       }); 
+    } else {
+        alert("on noooo");
+
+    }
+}
+
+
+
+
+
+
+            
+ 
+
+    
+
+ 
+
+/*dev tools are not working, check on why
 populateWeatherData ()
 function populateWeatherData () {
     navigator.geolocation.getCurrentPosition((success) => {
         let {latitude, longitude } = success.coords;
-/*this has been changed to fetch longitude, lat, city and to change unites to imperial for farenheit*/
+/*this has been changed to fetch longitude, lat, city and to change unites to imperial for farenheit
         fetch(`https://api.openweathermap.org.data/2.5/onecall?lat=${latitude}&lon=${longitude}&city.name=${city}&exclude
         =hourly,minutely&unites=imperial&appid=${apiKey}`).then(res => res.json()).then(data => {
             console.log(data)
@@ -41,33 +100,12 @@ function populateWeatherData () {
     })
 }
 
-function showWeatherData(data) {
-    let 
-}
+ 
+}*/
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* keeping these wriiten functions in case
-function citySearch () {
-let city = $('#city').val();
-fetch var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey;
-}
-*/
 /*
 fetch (apiKey)
 .then(function(response) {
