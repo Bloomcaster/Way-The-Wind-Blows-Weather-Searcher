@@ -4,10 +4,10 @@ const cityInput = document.querySelector('#city');
 const timeEl = querySelector('#time');
 const weatherForecastDayEL = document.querySelector('#weather-forecast');
 const currentTempEl = document.querySelector('#current-temperature');
-const currentWeatherItemsEl = querySelector('#current-weather-items');
-/*
+const currentWeatherItemsEl = querySelector('#weather-forecast');
+
 const currentTime = moment().format("LLLL");
-$("#time").text(moment().format("LLLL"))*/
+$("#time").text(moment().format("LLLL"))
 
 const months =['January', 'February', 'March', 'April', 'May', 'June', 
                'July', 'August', 'September', 'October', 'November', 'December'];
@@ -15,7 +15,7 @@ const months =['January', 'February', 'March', 'April', 'May', 'June',
 
 
 
-setInterval ( ) => {
+setInterval (() => {
 
     const month = time.getMonth ();
     const day = time.getDay ();
@@ -25,7 +25,7 @@ setInterval ( ) => {
     timeEl.innerHTML = hourin24hourformat + ':' + minutes;
     dateEl.innerHTML = day[day] + ',' + date + ' ' + months[months]
 
-} 1000;
+}, 1000);
 
 const formSubmitHandler = function (event){
     event.preventDefault();
@@ -45,6 +45,7 @@ const formSubmitHandler = function (event){
 const newQuery = function city () {
     apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey;
 
+   /*
     fetch(apiKey)
     .then(function (response) {
         if (response.ok) {
@@ -59,23 +60,39 @@ const newQuery = function city () {
             console.log(data);
         })
     }
-}
+}*/
 
   fetch(apiUrl)
  .then(function(response) {
-    if response.ok){
-       response.json().then(function (data){
+     response.json().then(function (data){
         console.log(data);
         displayWeather(data, city);
        }); 
-    } else {
-        alert("on noooo");
+  
 
-    }
-}
+    /*
+       function showWeatherData (data) {
+        let {wind_speed, humidity, temperature} = data.current;
 
 
 
+        currentWeatherItemsEl.innerHTML =
+      ` <div class="stormy" id="all-weather-items">
+       <div class="weather-item">
+         <div>Wind Speed</div>
+         <div>${wind_speed}</div>
+       </div>
+
+       <div class="weather-item">
+         <div>Humidity</div>
+         <div>${humidity}%</div>
+       </div>
+
+      <div class="weather-item">
+         <div>Temperature</div>
+         <div>${temperature}</div>
+       </div>;
+    
 
 
 
@@ -86,38 +103,7 @@ const newQuery = function city () {
 
  
 
-/*dev tools are not working, check on why
-populateWeatherData ()
-function populateWeatherData () {
-    navigator.geolocation.getCurrentPosition((success) => {
-        let {latitude, longitude } = success.coords;
-/*this has been changed to fetch longitude, lat, city and to change unites to imperial for farenheit
-        fetch(`https://api.openweathermap.org.data/2.5/onecall?lat=${latitude}&lon=${longitude}&city.name=${city}&exclude
-        =hourly,minutely&unites=imperial&appid=${apiKey}`).then(res => res.json()).then(data => {
-            console.log(data)
-            showWeatherData(data);
-        })
-    })
-}
-
- 
-}*/
 
 
 
-
-/*
-fetch (apiKey)
-.then(function(response) {
-    //convert to JSON object
-    return response.json();
-})
-.then(funtion(data) {
-    //display html here
-    let  = data.response.docs;
-    for (let i = 0; i< docArray.length; i ++) {
-        let listItem = document.createElement("li");
-        listItem.textContent = docArray[i].city;
-        listEl.appendChild(listItem);
-    }) */
-
+   
