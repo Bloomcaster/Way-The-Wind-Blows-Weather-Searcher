@@ -45,6 +45,84 @@ body{
     border: none;
  }
 
+ .weather {
+    text-align: center;
+ }
+
+ #city {
+    font-size: 35px;
+ }
+
+ #temperature {
+    font-size: 120px;
+    margin: 0;
+    margin-left: 25px;
+    margin-bottom: 10px;
+ }
+
+ .temp-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+#clouds{
+    font-size: 20px;
+    background: rgba(153, 205, 50, 0.778);
+    padding: 2px 20px;
+    border-radius: 15px;
+}
+main{
+    display: grid;
+    grid-column-gap: 25px;
+    grid-template-columns: 1fr 5px 1fr;
+    align-items: center;
+    margin: 0 50px;
+    
+}
+.next{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+.next p,.next h3{
+    margin: 3px 0;
+}
+.forecstD{
+    margin: 20px 50px;
+   
+}
+.weekF{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.cast-header{
+    
+   
+    width: max-content;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.divider1,.divider2{
+    background: rgba(175, 14, 151, 0.539);
+    height: 200px;
+    border-radius: 5px;
+}
+.divider2{
+    height: 5px;
+    width: 30%;
+    margin: 0 auto;
+}
+.time,.date{
+    color: rgb(159, 10, 157);
+}
+.desc{
+    color: rgb(52, 71, 14);
+}
+
 
 
 
