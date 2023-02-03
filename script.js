@@ -31,7 +31,16 @@ let parseWeather = function(weatherText) {
     let icon = day.weather[0].icon;
     let sunrise = timestampToTime(day.sunrise);
     let sunset = timestampToTime(day.sunset);
-}
+    let hightTemp = kToF(day.temp.max);
+    let lowTemp = kToF(day.temp.min);
+    let humidity = day.humidity;
+    let windSpeed = day.wind_speed;
+    let windGust = day.wind_gust;
+    displayWeatherDay(dayOfWeek, description, icon, sunrise, sunset, hightTemp, lowTemp, humidity, windSpeed, windGust );
+ }
+
+let displayWeatherDay = function(dayOfWeek, description, icon, sunrise, sunset, hightTemp, lowTemp, humidity, wind_speed, windGust)
+ let out = "<"
 
 
 
