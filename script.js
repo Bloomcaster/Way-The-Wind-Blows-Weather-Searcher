@@ -6,7 +6,19 @@ window.addEventListener("load",()=>{
             let lat = position.coords.latitude;
             const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&` + `lon=${lon}&appid=${apikey}`;
    
-
+            fetch(url).then((res)=>{
+                return res.json();
+            }).then((data)=>{
+                console.log(data);
+                console.log(new Date().getTime())
+                var dat= new Date(data.dt)
+                console.log(dat.toLocaleString(undefined,'Asia/Kolkata'))
+                console.log(new Date().getMinutes())
+                weatherReport(data);
+            })
+        })
+    }
+})
 
 
 
